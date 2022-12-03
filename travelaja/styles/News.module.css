@@ -1,0 +1,108 @@
+.articles {
+    padding: 100px 0;
+}
+
+.articles__main h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27.65px;
+    line-height: 120%;
+    color: #3D3E48;
+    margin: 0;
+    text-align: center;
+}
+
+.articles__main span {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #3D3E48;
+}
+
+.articles__main__tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
+.articles__main__tabs__element {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.articles__main__tabs__element span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 180%;
+    color: #3D3E48;
+}
+
+.articles__main__tabs__element._active {
+    background: #43B97F;
+    border-radius: 5px;
+}
+
+.articles__main__tabs__element._active span {
+    color: #ffffff;
+}
+
+.articles__main__tabs__element._active span:hover {
+    color: #ffffff;
+}
+
+.articles__main__tabs__element span:hover {
+    color: #43B97F;
+}
+
+.articles__main__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.articles__main__content__element {
+    width: calc(33% - 11px);
+}
+
+.articles__main__content__element img {
+    border-radius: 10px;
+    height: 330px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.articles__main__content__element h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.2px;
+    line-height: 180%;
+    color: #000000;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.articles__main__content__element span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #3D3E48;
+    text-align: left;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .articles__main__content {
+        gap: 10px;
+    }
+    
+    .articles__main__content__element {
+        width: calc(50% - 5px);
+    }
+}
