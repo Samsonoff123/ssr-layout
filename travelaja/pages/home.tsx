@@ -18,8 +18,8 @@ export default function Home({ photos }: Props) {
         
     }, [photos])
   return (
-    <>
-        <div className={styles.main}>
+    <main>
+        <section className={styles.main}>
             <div className="container">
                 <div className={styles.main__text}>
                     <h1>Explore the world with a smile</h1>
@@ -37,10 +37,10 @@ export default function Home({ photos }: Props) {
                     </button>
                 </div>
             </div>
-        </div>
-        <div className={styles.travel}>
+        </section>
+        <section className={styles.travel}>
             <div className="container">
-                <div className={styles.travelers}>
+                <div className={styles.travel__main}>
                     <div className={styles.travelers__image}>
                         {
                             photos?.photos.slice(9, 12).map((photo, index) => 
@@ -74,10 +74,10 @@ export default function Home({ photos }: Props) {
 
                 </div>
             </div>
-        </div>
-        <div className={styles.destination}>
+        </section>
+        <section className={styles.destination}>
             <div className="container">
-                <div className={styles.destinations}>
+                <div className={styles.destination__main}>
                     <h6>Top Destination</h6>
                     <h3>Discover your love</h3>
                     <div className={styles.destinations__posts}>
@@ -102,10 +102,10 @@ export default function Home({ photos }: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className={styles.testimonial}>
+        </section>
+        <section className={styles.testimonial}>
             <div className="container">
-                <div className={styles.aboutus}>
+                <div className={styles.testimonial__main}>
                     <h6>Testimonial</h6>
                     <h3>What they say about us</h3>
                     <div className={styles.aboutus__comments}>
@@ -125,8 +125,8 @@ export default function Home({ photos }: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </section>
+    </main>
   )
 }
 

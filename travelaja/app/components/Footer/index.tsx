@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Footer({}: Props) {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
         <div className="container">
             <div className={styles.footer__main}>
                 <div className={styles.footer__main__element}>
@@ -99,6 +99,6 @@ export default function Footer({}: Props) {
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
   )
 }

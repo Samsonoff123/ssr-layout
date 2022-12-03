@@ -30,13 +30,13 @@ export default function services({photos}: Props) {
         }
     ]
   return (
-    <>
-        <div className='banner' style={{background: 'url("/images/Service.png")50% 50% no-repeat'}}>
+    <main>
+        <section className='banner' style={{background: 'url("/images/Service.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Service</h1>
             </div>
-        </div>
-        <div className={styles.icons}>
+        </section>
+        <section className={styles.icons}>
             <div className="container">
                 <div className={styles.icons__main}>
                     {
@@ -52,8 +52,8 @@ export default function services({photos}: Props) {
 
                 </div>
             </div>
-        </div>
-        <div className={styles.destination}>
+        </section>
+        <section className={styles.destination}>
             <div className="container">
                 <div className={styles.destination__main}>
                     {
@@ -71,8 +71,8 @@ export default function services({photos}: Props) {
 
                 </div>
             </div>
-        </div>
-        <div className={styles.facilities} style={{background: 'url(" ' + photos?.photos[6].src.original + ' ")50% 50% no-repeat'}}>
+        </section>
+        <section className={styles.facilities} style={{background: 'url(" ' + photos?.photos[6].src.original + ' ")50% 50% no-repeat'}}>
             <div className="container">
                 <div className={styles.facilities__main}>
                     <div className={styles.facilities__main__text}>
@@ -115,8 +115,8 @@ export default function services({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className={styles.ourservice}>
+        </section>
+        <section className={styles.ourservice}>
             <div className="container">
                 <div className={styles.ourservice__main}>
                     <h6>BENEFITS</h6>
@@ -187,8 +187,8 @@ export default function services({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </section>
+    </main>
   )
 }
 

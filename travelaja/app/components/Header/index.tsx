@@ -26,7 +26,7 @@ export default function Header({}: Props) {
     }, [])
 
   return (
-    <div className={whiteHeader ? styles.header__white :styles.header}>
+    <header className={whiteHeader ? styles.header__white :styles.header}>
         <div className="container">
             <div className={styles.header__main}>
                 <div className={styles.header__main__logo}>travelaja</div>
@@ -52,6 +52,6 @@ export default function Header({}: Props) {
                 </div>
             </div>
         </div>
-    </div>
+    </header>
   )
 }

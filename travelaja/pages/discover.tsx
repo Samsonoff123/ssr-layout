@@ -2,28 +2,23 @@ import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Discover.module.css'
 import { iRepo } from "../app/types/interfaces"
+
+
 type Props = {
     photos: {
         photos: iRepo[]
     }
 }
 
-// interface iRepo {
-//     src: {
-//         original: string
-//     },
-//     photographer: string
-// }
-
 export default function discover({photos}: Props) {
   return (
-    <>
-        <div className='banner' style={{background: 'url("/images/Discover.png")50% 50% no-repeat'}}>
+    <main>
+        <section className='banner' style={{background: 'url("/images/Discover.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Discover</h1>
             </div>
-        </div>
-        <div className={styles.main__text}>
+        </section>
+        <section className={styles.main__text}>
             <div className="container">
                 <div className={styles.content}>
                     <div className={styles.content__left}>
@@ -38,8 +33,8 @@ export default function discover({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className={styles.info}>
+        </section>
+        <section className={styles.info}>
             <div className="container">
                 <div className={styles.content}>
                     <div className={styles.content__left}>
@@ -86,9 +81,9 @@ export default function discover({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </>
+    </main>
   )
 }
 

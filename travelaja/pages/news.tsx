@@ -26,13 +26,13 @@ export default function News({photos}: Props) {
     }
 
   return (
-    <>
-        <div className='banner' style={{background: 'url("/images/News.png")50% 50% no-repeat'}}>
+    <main>
+        <section className='banner' style={{background: 'url("/images/News.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Our News</h1>
             </div>
-        </div>
-        <div className={styles.articles}>
+        </section>
+        <section className={styles.articles}>
             <div className="container">
                 <div className={styles.articles__main}>
                     <h3>Travelaja Articles</h3>
@@ -62,8 +62,8 @@ export default function News({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </section>
+    </main>
   )
 }
 

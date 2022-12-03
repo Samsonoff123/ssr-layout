@@ -5,14 +5,14 @@ type Props = {}
 
 export default function contact({}: Props) {
   return (
-    <>
-        <div className='banner' style={{background: 'url("/images/Contact.png")50% 50% no-repeat'}}>
+    <main>
+        <section className='banner' style={{background: 'url("/images/Contact.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Contact Us</h1>
             </div>
-        </div>
+        </section>
 
-        <div className={styles.address}>
+        <section className={styles.address}>
             <div className="container">
                 <div className={styles.address__main}>
                     <div className={styles.address__main__left}>
@@ -63,7 +63,7 @@ export default function contact({}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-    </>
+        </section>
+    </main>
   )
 }

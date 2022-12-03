@@ -13,13 +13,13 @@ type Props = {
 export default function about({photos}: Props) {
 
   return (
-    <>
-        <div className='banner' style={{background: 'url("/images/About.png")50% 10% no-repeat'}}>
+    <main>
+        <section className='banner' style={{background: 'url("/images/About.png")50% 10% no-repeat'}}>
             <div className="container">
                 <h1>About Us</h1>
             </div>
-        </div>
-        <div className={styles.choose}>
+        </section>
+        <section className={styles.choose}>
             <div className="container">
                 <div className={styles.choose__main}>
                     <h3>Why Choose Us ?</h3>
@@ -54,8 +54,8 @@ export default function about({photos}: Props) {
                     </div>
                 </div>
             </div>
-        </div>
-        <div className={styles.about}>
+        </section>
+        <section className={styles.about}>
             <div className="container">
                 <div className={styles.about__main}>
                     <div className={styles.about__main__description}>
@@ -68,8 +68,8 @@ export default function about({photos}: Props) {
                     <img src={photos.photos[10].src.original} />
                 </div>
             </div>
-        </div>
-        <div className={styles.team}>
+        </section>
+        <section className={styles.team}>
             <div className="container">
                 <div className={styles.team__main}>
                     <h3>Our Teams</h3>
@@ -161,8 +161,8 @@ export default function about({photos}: Props) {
                 </Swiper>
                 </div>
             </div>
-        </div>
-    </>
+        </section>
+    </main>
   )
 }
 
