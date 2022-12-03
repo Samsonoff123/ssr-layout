@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from '../styles/Contact.module.css'
-import img from '../images/Contact.png'
 
 type Props = {}
 
 export default function contact({}: Props) {
   return (
     <>
-        <div className='banner' style={{background: 'url("'+ img.src +'")50% 50% no-repeat'}}>
+        <div className='banner' style={{background: 'url("/images/Contact.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Contact Us</h1>
             </div>

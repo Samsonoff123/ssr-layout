@@ -1,16 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
-import styles from '../../styles/Header.module.css'
+import styles from './Header.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 type Props = {}
 
-export default function index({}: Props) {
+export default function Header({}: Props) {
     const [whiteHeader, setWhiteHeader] = useState(false)
     const [burgerIsActive, setBurgerIsActive] = useState(false)
     const router = useRouter()
     const query = router.route
-    
+    const elementLink = styles.header__main__elements__link;
+    const elementLinkActive = styles.header__main__elements__link + ' ' + styles._active;
     useEffect(() => {
         const onScroll = () => {
             if(window.scrollY > 50) {
@@ -30,12 +31,12 @@ export default function index({}: Props) {
             <div className={styles.header__main}>
                 <div className={styles.header__main__logo}>travelaja</div>
                 <div className={burgerIsActive ? styles.header__main__elements + ' ' + styles._active  : styles.header__main__elements}>
-                    <Link className={query === '/home' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/home">Home</Link>
-                    <Link className={query === '/discover' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/discover">Discover</Link>
-                    <Link className={query === '/services' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/services">Services</Link>
-                    <Link className={query === '/news' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/news">News</Link>
-                    <Link className={query === '/about' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/about">About Us</Link>
-                    <Link className={query === '/contact' ? styles.header__main__elements__link + ' ' + styles._active :  styles.header__main__elements__link} href="/contact">Contact</Link>
+                    <Link className={query === '/home' ? elementLinkActive :  elementLink} href="/home">Home</Link>
+                    <Link className={query === '/discover' ? elementLinkActive :  elementLink} href="/discover">Discover</Link>
+                    <Link className={query === '/services' ? elementLinkActive :  elementLink} href="/services">Services</Link>
+                    <Link className={query === '/news' ? elementLinkActive :  elementLink} href="/news">News</Link>
+                    <Link className={query === '/about' ? elementLinkActive :  elementLink} href="/about">About Us</Link>
+                    <Link className={query === '/contact' ? elementLinkActive :  elementLink} href="/contact">Contact</Link>
                 </div>
                 <div className={styles.header__main__language}>
                     <select>

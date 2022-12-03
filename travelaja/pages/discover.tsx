@@ -1,25 +1,24 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Discover.module.css'
-import img from '../images/Discover.png'
-
+import { iRepo } from "../app/types/interfaces"
 type Props = {
     photos: {
         photos: iRepo[]
     }
 }
 
-interface iRepo {
-    src: {
-        original: string
-    },
-    photographer: string
-}
+// interface iRepo {
+//     src: {
+//         original: string
+//     },
+//     photographer: string
+// }
 
 export default function discover({photos}: Props) {
   return (
     <>
-        <div className='banner' style={{background: 'url("'+ img.src +'")50% 50% no-repeat'}}>
+        <div className='banner' style={{background: 'url("/images/Discover.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Discover</h1>
             </div>

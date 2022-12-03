@@ -1,6 +1,7 @@
-import Header from "../components/Header";
+import Header from "../app/components/Header";
 import HomePage from './home'
-import Footer from '../components/Footer'
+import Footer from '../app/components/Footer'
+import { iRepo } from "../app/types/interfaces"
 
 type Props = {
   photos: {
@@ -8,12 +9,7 @@ type Props = {
   }
 }
 
-interface iRepo {
-  src: {
-      original: string
-  },
-  photographer: string
-}
+
 
 const Home = ({ photos }: Props) => {
   

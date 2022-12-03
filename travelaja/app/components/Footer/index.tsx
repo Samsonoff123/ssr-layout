@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
-import styles from '../../styles/Footer.module.css'
+import styles from './Footer.module.css'
 
 type Props = {}
 
-export default function index({}: Props) {
+export default function Footer({}: Props) {
   return (
     <div className={styles.footer}>
         <div className="container">

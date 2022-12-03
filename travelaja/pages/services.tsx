@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from '../styles/Services.module.css'
-import img from '../images/Service.png'
+import { iRepo } from "../app/types/interfaces"
 
 type Props = {
     photos: {
@@ -9,12 +9,6 @@ type Props = {
     }
 }
 
-interface iRepo {
-    src: {
-        original: string
-    },
-    photographer: string
-}
 
 export default function services({photos}: Props) {
     const iconsData = [
@@ -37,7 +31,7 @@ export default function services({photos}: Props) {
     ]
   return (
     <>
-        <div className='banner' style={{background: 'url("'+ img.src +'")50% 50% no-repeat'}}>
+        <div className='banner' style={{background: 'url("/images/Service.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Service</h1>
             </div>

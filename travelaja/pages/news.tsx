@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/News.module.css'
-import img from '../images/News.png'
+import { iRepo } from "../app/types/interfaces"
 
 type Props = {
     photos: {
@@ -9,14 +9,8 @@ type Props = {
     }
 }
 
-interface iRepo {
-    src: {
-        original: string
-    },
-    photographer: string
-}
 
-export default function news({photos}: Props) {
+export default function News({photos}: Props) {
     const [tab, setTab] = useState(3)
     const [data, setData] = useState(photos)
 
@@ -33,7 +27,7 @@ export default function news({photos}: Props) {
 
   return (
     <>
-        <div className='banner' style={{background: 'url("'+ img.src +'")50% 50% no-repeat'}}>
+        <div className='banner' style={{background: 'url("/images/News.png")50% 50% no-repeat'}}>
             <div className="container">
                 <h1>Our News</h1>
             </div>

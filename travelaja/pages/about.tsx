@@ -1,7 +1,7 @@
 import React from 'react'
-import img from '../images/About.png'
 import styles from '../styles/About.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { iRepo } from "../app/types/interfaces"
 
 type Props = {
     photos: {
@@ -9,19 +9,12 @@ type Props = {
     }
 }
 
-interface iRepo {
-    src: {
-        original: string
-    },
-    photographer: string,
-    alt: string,
-}
 
 export default function about({photos}: Props) {
 
   return (
     <>
-        <div className='banner' style={{background: 'url("'+ img.src +'")50% 10% no-repeat'}}>
+        <div className='banner' style={{background: 'url("/images/About.png")50% 10% no-repeat'}}>
             <div className="container">
                 <h1>About Us</h1>
             </div>
@@ -103,7 +96,7 @@ export default function about({photos}: Props) {
                     >
                     {
                         photos?.photos.map((e, id) =>
-                            <SwiperSlide>
+                            <SwiperSlide key={id}>
                                 <img src={e.src.original} />
                                 <h6>{e.photographer}</h6>
                                 <span>{e.alt}</span>

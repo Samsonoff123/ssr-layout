@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
+import Icon from '../app/icons/Icon'
+import { iRepo } from "../app/types/interfaces"
 
 type Props = {
     photos: {
@@ -8,14 +10,8 @@ type Props = {
     }
 }
 
-interface iRepo {
-    src: {
-        original: string
-    },
-    photographer: string
-}
 
-export default function home({ photos }: Props) {
+export default function Home({ photos }: Props) {
 
     useEffect(() => {
         console.log(photos);
@@ -94,9 +90,7 @@ export default function home({ photos }: Props) {
                                         <div className={styles.destinations__posts__element__description__bottom}>
                                             <h4>Rp. 7,5jt</h4>
                                             <div className={styles.destinations__posts__element__description__bottom__date}>
-                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.30173e-06 7.73725C-0.00247227 7.88928 0.0413156 8.03848 0.125566 8.16505C0.209817 8.29163 0.33055 8.38961 0.471758 8.446L7.67251 11.3267L10.5533 18.5282C10.6089 18.6675 10.705 18.7869 10.8292 18.871C10.9534 18.9551 11.1 19.0001 11.25 19H11.262C11.4139 18.9976 11.5615 18.9491 11.6853 18.861C11.809 18.7729 11.9031 18.6493 11.955 18.5065L17.955 2.0065C18.0041 1.87227 18.0139 1.7268 17.9831 1.58722C17.9523 1.44764 17.8822 1.31977 17.7812 1.21866C17.6802 1.11755 17.5524 1.04741 17.4128 1.01651C17.2733 0.985615 17.1278 0.995237 16.9935 1.04425L0.493508 7.04425C0.350683 7.09632 0.227031 7.19053 0.138911 7.31441C0.0507903 7.43828 0.00235369 7.58599 8.30173e-06 7.738V7.73725Z" fill="#3D3E48"/>
-                                                </svg>
+                                                <Icon />
                                                 7 days for trips
                                             </div>
                                         </div>
@@ -116,8 +110,8 @@ export default function home({ photos }: Props) {
                     <h3>What they say about us</h3>
                     <div className={styles.aboutus__comments}>
                         {
-                            [...Array(6)].map(e => 
-                                <div className={styles.aboutus__comments__element}>
+                            [...Array(6)].map((e, index) => 
+                                <div className={styles.aboutus__comments__element} key={index}>
                                     <div className={styles.aboutus__comments__element__profile}>
                                         <img src="https://webusupload.apowersoft.info/picwishcom/wp-content/uploads/2021/11/unblur-image.jpg" />
                                         <h4>Angelina Simple</h4>
@@ -150,4 +144,4 @@ export const getStaticProps = async () => {
       props: { photos },
     };
   
-  };
+};
