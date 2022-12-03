@@ -1,4 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+figma: https://www.figma.com/file/TuUEs4z6YhcB1vGvViarl2/travelaja-(Community)?node-id=14%3A27&t=C5pHGGizvnU2efkK-0
 
 ## Getting Started
 
